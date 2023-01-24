@@ -7,6 +7,9 @@ module.exports = {
 				"primary-blue": "#5CA4EC",
 				"secondary-blue": "#A5C7EA",
 			},
+			fontFamily: {
+				"Montserrat": ["Montserrat", "ui-sans-serif", "system-ui"]
+			}
 		},
 	},
 	plugins: [],
