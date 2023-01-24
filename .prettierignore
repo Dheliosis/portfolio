@@ -2,3 +2,6 @@
 build
 coverage
 .next
+package-lock.json
+next.config.js
+tsconfig.json

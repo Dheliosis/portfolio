@@ -3,9 +3,9 @@ module.exports = {
 	content: ["./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
-			colors:{
+			colors: {
 				"primary-blue": "#5CA4EC",
-				"secondary-blue": "#A5C7EA"
+				"secondary-blue": "#A5C7EA",
 			},
 		},
 	},

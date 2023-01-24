@@ -36,7 +36,7 @@ const Navigation = () => {
 	return (
 		<nav className="bg-white w-3/4 rounded-3xl pt-4 pb-2 px-4 absolute bottom-4 shadow-md">
 			<div className="flex justify-around">
-				{navigatorTab.map(tab => (
+				{navigatorTab.map((tab) => (
 					<button
 						onClick={() => {
 							setActiveTabNavigator(tab.name)
