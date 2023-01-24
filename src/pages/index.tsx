@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
 import { Inter } from "@next/font/google"
-import Navigation from "@/components/navigation"
+import WeekCalendar from "@/components/weekCalendar"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -15,7 +15,8 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main>
-				<h1> Test</h1>
+				<h1 className="text-3xl mb-4">Caro <span className="text-red-500">♦️</span></h1>
+				<WeekCalendar/>
 			</main>
 		</>
 	)
