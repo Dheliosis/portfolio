@@ -5,7 +5,6 @@ export default function WeekCalendar() {
 	const firstDayOfWeek = dayjs().day(1).format("D")
 	const today = dayjs().day()
 	const dayInFrench = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
-	console.log(firstDayOfWeek)
 
 	function getDateOfDay(index: number) {
 		return parseInt(firstDayOfWeek) + index
