@@ -1,41 +1,38 @@
+import { projectDetailsInterface } from "@/lib/projects"
 import "material-symbols"
 import Image from "next/image"
-import teamsplate from "public/teamsplate.png"
+import { useRouter } from "next/router"
 
 interface projectInterface {
-	bgColorGradient: string
-	image: any
-	projectName: string
+	projectData: projectDetailsInterface
 }
 
-export default function Project({
-	bgColorGradient,
-	image,
-	projectName,
-}: projectInterface) {
+export default function Project({ projectData }: projectInterface) {
+	const router = useRouter()
+
 	return (
 		<>
 			<div
 				className={`
-				h-64
-				w-44
+				h-60
+				w-40
 				rounded-2xl
 				flex
 				flex-col
 				items-center
 				relative
 				bg-gradient-to-b
-				${bgColorGradient}
+				${projectData.bgColorGradient}
 				my-10
 				mx-2
 			`}
 			>
-				<h2 className="pt-4">{projectName}</h2>
+				<h2 className="pt-4">{projectData.title}</h2>
 				<Image
-					src={image}
+					src={projectData.icon}
 					width={100}
 					height={100}
-					alt={projectName}
+					alt={projectData.title}
 					className="mt-10"
 				></Image>
 				<button
@@ -50,6 +47,9 @@ export default function Project({
 						absolute
 						-bottom-5
 					`}
+					onClick={() => {
+						router.push(`projects/${projectData.link}`)
+					}}
 				>
 					<span className="material-symbols-outlined text-3xl">visibility</span>
 				</button>
