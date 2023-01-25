@@ -12,7 +12,7 @@ export default function Layout({ children }: any) {
 				<div className=" min-w-screen flex justify-center">
 					<Navigation />
 				</div>
-				{children}
+				<div className="pb-36">{children}</div>
 			</main>
 		</div>
 	)
