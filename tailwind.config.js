@@ -8,8 +8,8 @@ module.exports = {
 				"secondary-blue": "#A5C7EA",
 			},
 			fontFamily: {
-				"Montserrat": ["Montserrat", "ui-sans-serif", "system-ui"]
-			}
+				Montserrat: ["Montserrat", "ui-sans-serif", "system-ui"],
+			},
 		},
 	},
 	plugins: [],

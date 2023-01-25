@@ -15,8 +15,10 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main>
-				<h1 className="text-3xl mb-4">Caro <span className="text-red-500">♦️</span></h1>
-				<WeekCalendar/>
+				<h1 className="text-3xl mb-4">
+					Caro <span className="text-red-500">♦️</span>
+				</h1>
+				<WeekCalendar />
 			</main>
 		</>
 	)

@@ -12,7 +12,7 @@ export default function WeekCalendar() {
 
 	function isToday(index: number) {
 		// La semaine commence un dimanche, donc pour commencer un lundi on retir -1 à today pour afficher le bon jour
-		return index === today -1
+		return index === today - 1
 	}
 	return (
 		<>
