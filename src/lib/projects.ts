@@ -1,11 +1,11 @@
-import teamsplateIcon from "public/img/teamsplate/teamsplate-icon.png"
-import teamsplateImage from "public/img/teamsplate/teamsplate.png"
-import gyravoIcon from "public/img/gyravo/gyravo-icon.png"
-import gyravoImage from "public/img/gyravo/gyravo.png"
+import teamsplateIcon from "public/img/teamsplate/teamsplate-icon.webp"
+import teamsplateImage from "public/img/teamsplate/teamsplate.webp"
+import gyravoIcon from "public/img/gyravo/gyravo-icon.webp"
+import gyravoImage from "public/img/gyravo/gyravo.webp"
 import spaa from "public/img/spaa/spaa.svg"
-import shakeImage from "public/img/shake/shake.png"
-import myStudentProjectImage from "public/img/myStudentProject/myStudentProject.png"
-import myStudentProjectIcon from "public/img/myStudentProject/myStudentProject-icon.png"
+import shakeImage from "public/img/shake/shake.webp"
+import myStudentProjectImage from "public/img/myStudentProject/myStudentProject.webp"
+import myStudentProjectIcon from "public/img/myStudentProject/myStudentProject-icon.webp"
 
 export interface projectsDataInterface {
 	[projectName: string]: projectDetailsInterface
