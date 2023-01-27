@@ -25,8 +25,12 @@ export async function getStaticProps({ params }: any) {
 export default function Project({ projectData }: any) {
 	return (
 		<>
-			<div>
-				<h1 className="text-5xl font-bold mt-5 mb-3">{projectData.title}</h1>
+			<div className="lg:h-screen lg:flex lg:flex-col lg:justify-center relative z-20">
+				<div className="lg:flex lg:justify-around lg:items-center lg:h-fit">
+					<div className="lg:h-fit lg:w-fit">
+						<h1 className="text-5xl font-bold mt-5 mb-3 lg:w-fit">
+							{projectData.title}
+						</h1>
 				<div className="flex flex-wrap">
 					{projectData.stack.map((techno: technoDetailsInterface) => (
 						<p
@@ -47,7 +51,10 @@ export default function Project({ projectData }: any) {
 						</p>
 					))}
 				</div>
-				<p className="my-5">{projectData.description}</p>
+						<p className="my-5 xl:w-1/2 lg:h-fit lg:mb-16">
+							{projectData.description}
+						</p>
+					</div>
 				<Image
 					src={projectData.image}
 					width={500}
@@ -55,7 +62,12 @@ export default function Project({ projectData }: any) {
 					alt={projectData.title}
 					className="my-10"
 				></Image>
-				<a target="_blank" href={projectData.buttonLink} rel="noreferrer">
+				</div>
+				<a
+					target="_blank"
+					href={projectData.buttonLink}
+					rel="noreferrer"
+				>
 					<button className="bg-violet-500 rounded-xl px-5 py-3 text-white font-bold">
 						{projectData.buttonText}
 					</button>

@@ -12,7 +12,7 @@ export default function Projects() {
 
 	return (
 		<main className="flex flex-col justify-between items-center">
-			<h1 className="text-3xl font-bold">Projets</h1>
+			<h1 className="text-6xl font-bold">Projets</h1>
 			{Object.keys(projectsData).length < 1 ? (
 				<></>
 			) : (
@@ -22,7 +22,7 @@ export default function Projects() {
 						<Project projectData={projectsData.spaa} />
 						<Project projectData={projectsData.myStudentProject} />
 					</div>
-					<div className="mt-20">
+					<div className="mt-20 lg:mt-0">
 						<Project projectData={projectsData.gyravo} />
 						<Project projectData={projectsData.shake} />
 					</div>

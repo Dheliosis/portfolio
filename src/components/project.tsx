@@ -16,6 +16,8 @@ export default function Project({ projectData }: projectInterface) {
 				className={`
 				h-60
 				w-40
+				lg:h-96
+				lg:w-72
 				rounded-2xl
 				flex
 				flex-col
