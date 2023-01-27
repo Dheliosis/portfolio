@@ -27,7 +27,7 @@ export default function Project({ projectData }: any) {
 	return (
 		<>
 			<AnimatedBackground bgColor={projectData.animatedBgColor}></AnimatedBackground>
-			<div className="lg:h-screen lg:flex lg:flex-col lg:justify-center relative z-20">
+			<main className="lg:h-screen lg:flex lg:flex-col lg:justify-center relative z-20">
 				<div className="lg:flex lg:justify-around lg:items-center lg:h-fit">
 					<div className="lg:h-fit lg:w-fit">
 						<h1 className="text-5xl font-bold mt-5 mb-3 lg:w-fit">
@@ -74,7 +74,7 @@ export default function Project({ projectData }: any) {
 						{projectData.buttonText}
 					</button>
 				</a>
-			</div>
+			</main>
 		</>
 	)
 }
