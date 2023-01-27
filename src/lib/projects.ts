@@ -22,6 +22,7 @@ export interface projectDetailsInterface {
 	link: string
 	buttonText: string
 	buttonLink: string
+	animatedBgColor: string
 }
 
 interface technoInterface {
@@ -108,6 +109,7 @@ const projectsData: projectsDataInterface = {
 		buttonText: "Voir l'application",
 		buttonLink:
 			"https://play.google.com/store/apps/details?id=com.jaddloMobile",
+		animatedBgColor: "bg-[#0161FB]",
 	},
 	gyravo: {
 		title: "GY.RA.VO.",
@@ -127,6 +129,7 @@ const projectsData: projectsDataInterface = {
 		link: "gyravo",
 		buttonText: "Voir le site web",
 		buttonLink: "https://gyravo.netlify.app",
+		animatedBgColor: "bg-[#0BB755]",
 	},
 	spaa: {
 		title: "SPAA",
@@ -141,6 +144,7 @@ const projectsData: projectsDataInterface = {
 		link: "spaa",
 		buttonText: "Voir le site web",
 		buttonLink: "https://spaa-angers.netlify.app",
+		animatedBgColor: "bg-[#EC6608]",
 	},
 	shake: {
 		title: "Shake",
@@ -155,6 +159,7 @@ const projectsData: projectsDataInterface = {
 		link: "shake",
 		buttonText: "Voir le site web",
 		buttonLink: "https://shake-mds.netlify.app",
+		animatedBgColor: "bg-[#EFA61B]",
 	},
 	myStudentProject: {
 		title: "MyStudentProject",
@@ -169,6 +174,7 @@ const projectsData: projectsDataInterface = {
 		link: "myStudentProject",
 		buttonText: "Voir le site web",
 		buttonLink: "https://mystudentproject.netlify.app",
+		animatedBgColor: "bg-[#2DABD0]",
 	},
 }
 
