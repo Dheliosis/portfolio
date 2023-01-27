@@ -25,7 +25,7 @@ const Navigation = () => {
 		{
 			name: "Contact",
 			icon: "message",
-			link: "/",
+			link: "/contact",
 		},
 	]
 
@@ -34,7 +34,24 @@ const Navigation = () => {
 	)
 
 	return (
-		<nav className="bg-white w-3/4 rounded-3xl pt-4 pb-2 px-4 fixed bottom-4 shadow-md z-50 lg:w-fit lg:bottom-auto lg:left-10 lg:h-1/3">
+		<nav
+			className="
+				bg-white
+				w-3/4
+				rounded-3xl
+				pt-4
+				pb-2
+				px-4
+				fixed
+				bottom-4
+				shadow-md
+				z-50
+				lg:w-fit
+				lg:bottom-auto
+				lg:left-10
+				lg:h-1/3
+			"
+		>
 			<div className="flex justify-around lg:flex-col lg:h-full ">
 				{navigatorTab.map(tab => (
 					<button
@@ -43,7 +60,7 @@ const Navigation = () => {
 							router.push(tab.link)
 						}}
 						key={tab.name}
-						className="flex flex-col items-center"
+						className="flex flex-col items-center lg:flex-row lg:justify-center lg:mx-1"
 					>
 						<span
 							className={`material-symbols-outlined text-3xl ${
@@ -55,7 +72,7 @@ const Navigation = () => {
 							{tab.icon}
 						</span>
 						{activeTabNavigator === tab.name ? (
-							<span className="rounded-full bg-primary-blue w-2 h-2 mt-2"></span>
+							<span className="rounded-full bg-primary-blue w-2 h-2 mt-2 lg:absolute lg:right-2"></span>
 						) : null}
 					</button>
 				))}

@@ -25,6 +25,7 @@ export default function Project({ projectData }: projectInterface) {
 				relative
 				bg-gradient-to-b
 				${projectData.bgColorGradient}
+				to-white
 				my-10
 				mx-2
 			`}
