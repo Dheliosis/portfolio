@@ -30,13 +30,15 @@ export default function Project({ projectData }: projectInterface) {
 			`}
 			>
 				<h2 className="pt-4">{projectData.title}</h2>
-				<Image
-					src={projectData.icon}
-					width={100}
-					height={100}
-					alt={projectData.title}
-					className="mt-10"
-				></Image>
+				<div className="h-full flex items-center justify-center">
+					<Image
+						src={projectData.icon}
+						width={110}
+						height={100}
+						alt={projectData.title}
+						className="mb-16 flex justify-center items-center"
+					></Image>
+				</div>
 				<button
 					className={`
 						bg-[#F9EAED]
