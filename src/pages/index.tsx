@@ -14,14 +14,24 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="flex flex-col justify-between items-center">
+			<main className="flex flex-col justify-between items-center px-4">
 				<h1 className="text-6xl font-bold mb-5">
 					Caro <span className="text-red-500">♦️</span>
 				</h1>
 				<div>
-					<WeekCalendar />
-					<div>TEXTE DE PRÉSENTATION</div>
-
+					<div className="pb-10">
+						<p>Hello, bienvenue chez moi!</p>
+						<p>Enfin bienvenue dans mon monde. </p>
+						<p>
+							Un monde fait de balles de hand, de lignes de code, de touches de
+							manette, de pages de livre, de grains de sable, de flocons de
+							neige et de sourires.
+						</p>
+					</div>
+					<div>
+						<p className="pb-4">Mais Caro , tu fais quoi aujourd'hui ?</p>
+						<WeekCalendar />
+					</div>
 				</div>
 			</main>
 		</>
