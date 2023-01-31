@@ -29,15 +29,17 @@ export default function Contact() {
 	]
 	return (
 		<>
-			<main className="flex flex-col items-center h-[80vh] lg:justify-start">
+			<main className="flex flex-col items-center h-[80vh] justify-start">
 				<h1 className="text-6xl font-bold mb-5">Contact</h1>
-				<div className="flex flex-wrap justify-center items-center lg:h-full">
-					{contactData.map(contact => (
-						<ContactBuble
-							key={contact.name}
-							contactData={contact}
-						></ContactBuble>
-					))}
+				<div className="flex justify-center items-center h-full">
+					<div className="flex flex-wrap justify-center items-center">
+						{contactData.map(contact => (
+							<ContactBuble
+								key={contact.name}
+								contactData={contact}
+							></ContactBuble>
+						))}
+					</div>
 				</div>
 			</main>
 		</>
