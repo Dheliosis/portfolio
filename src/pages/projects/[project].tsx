@@ -26,7 +26,9 @@ export async function getStaticProps({ params }: any) {
 export default function Project({ projectData }: any) {
 	return (
 		<>
-			<AnimatedBackground bgColor={projectData.animatedBgColor}></AnimatedBackground>
+			<AnimatedBackground
+				bgColor={projectData.animatedBgColor}
+			></AnimatedBackground>
 			<main className="lg:h-screen lg:flex lg:flex-col lg:justify-center relative z-20">
 				<div className="lg:flex lg:justify-around lg:items-center lg:h-fit">
 					<div className="lg:h-fit lg:w-fit">
@@ -56,6 +58,11 @@ export default function Project({ projectData }: any) {
 						<p className="my-5 xl:w-1/2 lg:h-fit lg:mb-16">
 							{projectData.description}
 						</p>
+						<a target="_blank" href={projectData.buttonLink} rel="noreferrer">
+							<button className="bg-violet-500 rounded-xl px-5 py-3 text-white font-bold">
+								{projectData.buttonText}
+							</button>
+						</a>
 					</div>
 					<Image
 						src={projectData.preview}
@@ -65,15 +72,6 @@ export default function Project({ projectData }: any) {
 						className="my-10"
 					></Image>
 				</div>
-				<a
-					target="_blank"
-					href={projectData.buttonLink}
-					rel="noreferrer"
-				>
-					<button className="bg-violet-500 rounded-xl px-5 py-3 text-white font-bold">
-						{projectData.buttonText}
-					</button>
-				</a>
 			</main>
 		</>
 	)
