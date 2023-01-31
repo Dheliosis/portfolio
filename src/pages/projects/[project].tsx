@@ -58,8 +58,8 @@ export default function Project({ projectData }: any) {
 						</p>
 					</div>
 					<Image
-						src={projectData.image}
-						width={500}
+						src={projectData.preview}
+						width={700}
 						height={500}
 						alt={projectData.title}
 						className="my-10"
