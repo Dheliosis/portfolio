@@ -14,7 +14,12 @@ interface contactBubleInterface {
 
 export default function ContactBuble({ contactData }: contactBubleInterface) {
 	return (
-		<div className="p-4 rounded-2xl mx-2 my-2 bg-gradient-to-br shadow-lg relative">
+		<div
+			className="p-4 rounded-2xl mx-2 my-2 bg-gradient-to-br relative z-10"
+			style={{
+				boxShadow: "inset " + "2px " + "2px " + "20px " + "3px " + "rgb(255 255 255 / 0.22)",
+			}}
+		>
 			<div
 				className={`
 						absolute
@@ -26,6 +31,7 @@ export default function ContactBuble({ contactData }: contactBubleInterface) {
 						bg-gradient-to-br
 						${contactData.gradientColor}
 						via-transparent
+						-z-10
 					`}
 			></div>
 			<a href={contactData.link} target="_blank" rel="noreferrer">
@@ -35,9 +41,7 @@ export default function ContactBuble({ contactData }: contactBubleInterface) {
 						alt={contactData.name}
 						width={40}
 					></Image>
-					<span className="material-symbols-outlined">
-						arrow_outward
-					</span>
+					<span className="material-symbols-outlined">arrow_outward</span>
 				</div>
 				<div>
 					<p>{contactData.name}</p>
