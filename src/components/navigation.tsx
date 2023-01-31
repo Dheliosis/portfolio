@@ -46,8 +46,7 @@ const Navigation = () => {
 				bottom-4
 				shadow-md
 				z-50
-				lg:w-fit
-				lg:bottom-auto
+				lg:w-fit lg:top-1/3
 				lg:left-10
 				lg:h-1/3
 			"
