@@ -55,7 +55,7 @@ export default function Project({ projectData }: any) {
 								</p>
 							))}
 						</div>
-						<p className="my-5 xl:w-1/2 lg:h-fit lg:mb-16">
+						<p className="my-5 lg:h-fit lg:mb-16">
 							{projectData.description}
 						</p>
 						<a target="_blank" href={projectData.buttonLink} rel="noreferrer">
