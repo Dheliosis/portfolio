@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Image from "next/image"
 import { Inter } from "@next/font/google"
 import WeekCalendar from "@/components/weekCalendar"
 
@@ -29,7 +28,7 @@ export default function Home() {
 						</p>
 					</div>
 					<div>
-						<p className="pb-4">Mais Caro , tu fais quoi aujourd'hui ?</p>
+						<p className="pb-4">Mais Caro , tu fais quoi aujourd&apos;hui ?</p>
 						<WeekCalendar />
 					</div>
 				</div>

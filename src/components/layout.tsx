@@ -7,7 +7,7 @@ const monserrat = Montserrat({
 
 export default function Layout({ children }: any) {
 	return (
-		<div className={`bg-[#000916] min-h-screen ${monserrat.className} pt-8 min-w-screen text-white`}>
+		<div className={`bg-[#000F24] min-h-screen ${monserrat.className} pt-8 min-w-screen text-white`}>
 			<main className="min-h-screen">
 				<div className=" min-w-screen flex justify-center">
 					<Navigation />
