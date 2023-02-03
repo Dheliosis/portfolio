@@ -1,6 +1,8 @@
 import Head from "next/head"
 import { Inter } from "@next/font/google"
 import WeekCalendar from "@/components/weekCalendar"
+import Image from "next/image"
+import handball from "public/img/handball.jpeg"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -13,24 +15,73 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="flex flex-col justify-between items-center px-4">
-				<h1 className="text-6xl font-bold mb-5">
-					Caro <span className="text-red-500">♦️</span>
-				</h1>
-				<div>
-					<div className="pb-10">
-						<p>Hello, bienvenue chez moi!</p>
-						<p>Enfin bienvenue dans mon monde. </p>
-						<p>
-							Un monde fait de balles de hand, de lignes de code, de touches de
-							manette, de pages de livre, de grains de sable, de flocons de
-							neige et de sourires.
-						</p>
-					</div>
+			<main className="flex flex-col">
+				<div className="lg:h-screen lg:flex lg:items-center px-4 xl:px-96">
 					<div>
-						<p className="pb-4">Mais Caro , tu fais quoi aujourd&apos;hui ?</p>
-						<WeekCalendar />
+						<h1 className="text-6xl font-bold mb-5">
+							Hello, je suis Caro <span className="text-red-500">♦️</span>
+						</h1>
+						<p className="text-6xl font-bold text-primary-blue">
+							Bienvenue chez moi !
+						</p>
+						<div className="pb-10 text-xl">
+							<p>Enfin bienvenue dans mon monde. </p>
+							<p>
+								Un monde fait de balles de hand, de lignes de code, de touches
+								de manette, de pages de livre, de grains de sable, de flocons de
+								neige et de sourires.
+							</p>
+						</div>
+						<div className="lg:flex lg:items-center lg:justify-between">
+							<div className="flex justify-center">
+								<Image
+									src={handball}
+									alt={"Caroline Fassot"}
+									height={500}
+									className="rounded-3xl"
+								></Image>
+							</div>
+							<div className="lg:w-3/5 py-8">
+								<p>
+									Me décrire sans commencer par exprimer ma passion pour le{" "}
+									<span className="text-red-500">handball</span> n&apos;aurait
+									aucune sens.
+								</p>
+								<p>
+									<span className="text-red-500">Déterminer</span>, à l&apos;
+									<span className="text-red-500">écoute</span>,{" "}
+									<span className="text-red-500">investie</span> et{" "}
+									<span className="text-red-500">passionnée</span>. Voilà les
+									qualités primordiales pour moi, que ce soit dans le sport que
+									dans l&apos;univers du développement.
+								</p>
+								<p>
+									J&apos;ai commencer mes premiers pas sur un ordinateur un jour
+									où j&apos;étais malade, mon père m&apos;a posé un pc sur les
+									genoux et depuis je l&apos;ai posé sur un bureau.
+								</p>
+								<p>
+									J&apos;ai commencé mes premiers pas dans le développement au lycée, et
+									j&apos;ai continué dans mes études supérieurs. Actuellement
+									détentrice du titre de{" "}
+									<span className="text-red-500">
+										Conceptrice, Développeuse d&apos;Application
+									</span>{" "}
+									et d&apos;un{" "}
+									<span className="text-red-500">Bachelor Développeur Web</span>
+									, je continue l&apos;aventure en{" "}
+									<span className="text-red-500">
+										Master Développeur Fullstask
+									</span>
+									.
+								</p>
+							</div>
+						</div>
 					</div>
+				</div>
+				<div className="bg-[#E4E4E4] text-black px-4 xl:px-96 py-10">
+					<p className="pb-4 text-xl">Mais Caro, tu fais quoi aujourd&apos;hui ?</p>
+					<WeekCalendar />
 				</div>
 			</main>
 		</>
