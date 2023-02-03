@@ -3,11 +3,14 @@ import teamsplateLogo from "public/img/teamsplate/teamsplate.webp"
 import teamsplatePreview from "public/img/teamsplate/firstPreview.png"
 import gyravoIcon from "public/img/gyravo/gyravo-icon.webp"
 import gyravoLogo from "public/img/gyravo/gyravo.webp"
-import gyravoPreview from "public/img/gyravo/gyravoPreview.png"
+import gyravoMockup from "public/img/gyravo/gyravoMockup.png"
+import gyravoPreview from "public/img/gyravo/firstPreview.png"
 import spaaLogo from "public/img/spaa/spaa.svg"
-import spaaPreview from "public/img/spaa/spaaMockup.png"
+import spaaMockup from "public/img/spaa/spaaMockup.png"
+import spaaPreview from "public/img/spaa/firstPreview.png"
 import shakeLogo from "public/img/shake/shake.webp"
-import shakePreview from "public/img/shake/mockup_preview_shake.png"
+import shakeMockup from "public/img/shake/mockup_preview_shake.png"
+import shakePreview from "public/img/shake/firstPreview.png"
 import myStudentProjectLogo from "public/img/myStudentProject/myStudentProject.webp"
 import myStudentProjectIcon from "public/img/myStudentProject/myStudentProject-icon.webp"
 import myStudentProjectPreview from "public/img/myStudentProject/firstPreview.png"
@@ -23,6 +26,7 @@ export interface projectDetailsInterface {
 	date: string
 	icon: any
 	logo: any
+	mockup: any
 	preview: any
 	stack: Array<technoDetailsInterface>
 	link: string
@@ -104,6 +108,7 @@ const projectsData: projectsDataInterface = {
 		date: "main 2022 -> novembre 2022",
 		icon: teamsplateIcon,
 		logo: teamsplateLogo,
+		mockup: teamsplatePreview,
 		preview: teamsplatePreview,
 		stack: [
 			technos.reactNative,
@@ -127,6 +132,7 @@ const projectsData: projectsDataInterface = {
 		date: "decembre 2021 -> juillet 2022",
 		icon: gyravoIcon,
 		logo: gyravoLogo,
+		mockup: gyravoMockup,
 		preview: gyravoPreview,
 		stack: [
 			technos.nuxtjs,
@@ -148,6 +154,7 @@ const projectsData: projectsDataInterface = {
 		date: "28 juin 2021 -> 9 juillet 2021",
 		icon: spaaLogo,
 		logo: spaaLogo,
+		mockup: spaaMockup,
 		preview: spaaPreview,
 		stack: [technos.vuejs, technos.bootstrap],
 		link: "spaa",
@@ -164,6 +171,7 @@ const projectsData: projectsDataInterface = {
 		date: "22 février 2021 -> 26 février 2021",
 		icon: shakeLogo,
 		logo: shakeLogo,
+		mockup: shakeMockup,
 		preview: shakePreview,
 		stack: [technos.vuejs, technos.bootstrap],
 		link: "shake",
@@ -180,6 +188,7 @@ const projectsData: projectsDataInterface = {
 		date: "30 novembre 2020 -> 7 décembre 2020",
 		icon: myStudentProjectIcon,
 		logo: myStudentProjectLogo,
+		mockup: myStudentProjectPreview,
 		preview: myStudentProjectPreview,
 		stack: [technos.vuejs, technos.bootstrap],
 		link: "myStudentProject",

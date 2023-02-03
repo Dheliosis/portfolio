@@ -65,7 +65,7 @@ export default function Project({ projectData }: any) {
 						</a>
 					</div>
 					<Image
-						src={projectData.preview}
+						src={projectData.mockup}
 						alt={projectData.title}
 						className="my-10"
 						width={500}
