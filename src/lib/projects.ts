@@ -9,6 +9,7 @@ import spaaLogo from "public/img/spaa/spaa.svg"
 import spaaMockup from "public/img/spaa/spaaMockup.png"
 import spaaPreview from "public/img/spaa/firstPreview.png"
 import shakeLogo from "public/img/shake/shake.webp"
+import shakeIcon from "public/img/shake/shake-icon.png"
 import shakeMockup from "public/img/shake/mockup_preview_shake.png"
 import shakePreview from "public/img/shake/firstPreview.png"
 import myStudentProjectLogo from "public/img/myStudentProject/myStudentProject.webp"
@@ -105,7 +106,7 @@ const projectsData: projectsDataInterface = {
 		description:
 			// eslint-disable-next-line max-len
 			"Teamsplate est une application mobile, imaginée par Jaddlo, développée par Codekraft, qui permet aux clubs amateurs de créer facilement et rapidement des visuels pour animer leurs réseaux sociaux grâce à des modèles spécifiques entièrement personnalisables.",
-		date: "main 2022 -> novembre 2022",
+		date: "Mai 2022 ↣ Novembre 2022",
 		icon: teamsplateIcon,
 		logo: teamsplateLogo,
 		mockup: teamsplatePreview,
@@ -129,7 +130,7 @@ const projectsData: projectsDataInterface = {
 		description:
 			// eslint-disable-next-line max-len
 			"GY.RA.VO. acronyme de Gymnastique Rabelaisienne Volontaire et une association de gymnastique volontaire dépendante de la FFEGV. L'association voulait une refonte intégralle de leur site internet. Dans le contexte d'un projet d'école avec des camarades, nous avons monté tout un projet de refonte de l'univers de marque, de la communication et du site internet de l'association.",
-		date: "decembre 2021 -> juillet 2022",
+		date: "Décembre 2021 ↣ Juillet 2022",
 		icon: gyravoIcon,
 		logo: gyravoLogo,
 		mockup: gyravoMockup,
@@ -151,7 +152,7 @@ const projectsData: projectsDataInterface = {
 		description:
 			// eslint-disable-next-line max-len
 			"La Société de Protection des Animaux Autonome de Maine et Loire possède un site internet obselète. Dans le cadre de partiel nous avons entrepris avec des camarades la refonte intégrale du site internet.",
-		date: "28 juin 2021 -> 9 juillet 2021",
+		date: "28 Juin 2021 ↣ 9 Juillet 2021",
 		icon: spaaLogo,
 		logo: spaaLogo,
 		mockup: spaaMockup,
@@ -168,8 +169,8 @@ const projectsData: projectsDataInterface = {
 		description:
 			// eslint-disable-next-line max-len
 			"Shake est un site internet de recettes de cocktails. L'utilisateur peut rechercher une recette qu'il souhaite réaliser, alors les ingrédients et les étapes de la préparation lui sont proposés pour une réalisation simple et rapide. De plus l'utilisateur peut également renseigner les ingrédients qu'il possède chez lui et le site lui propose des recettes réalisables avec ce qu'il dispose.",
-		date: "22 février 2021 -> 26 février 2021",
-		icon: shakeLogo,
+		date: "22 Février 2021 ↣ 26 Février 2021",
+		icon: shakeIcon,
 		logo: shakeLogo,
 		mockup: shakeMockup,
 		preview: shakePreview,
@@ -185,7 +186,7 @@ const projectsData: projectsDataInterface = {
 		description:
 			// eslint-disable-next-line max-len
 			"MyStudentProject est un site vitrine des projets réalisés au sein de MyDigitalSchool. Durant une semaine de projets, avec des camarades, nous avons créés ce site dont l'objectif était de travailler l'accessibilité maximale du site.",
-		date: "30 novembre 2020 -> 7 décembre 2020",
+		date: "30 Novembre 2020 ↣ 7 Décembre 2020",
 		icon: myStudentProjectIcon,
 		logo: myStudentProjectLogo,
 		mockup: myStudentProjectPreview,
