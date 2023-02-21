@@ -11,20 +11,16 @@ export default function Projects() {
 	}, [])
 
 	return (
-		<main className="flex flex-col justify-between items-center">
-			<h1 className="text-6xl font-bold">Projets</h1>
+		<main className="flex flex-col justify-between px-4">
+			<h1 className="text-5xl font-bold mb-10">Mes projets</h1>
 			{Object.keys(projectsData).length < 1 ? (
 				<></>
 			) : (
-				<div className="flex flex-wrap justify-around">
-					<div>
-						<Project projectData={projectsData.teamsplate} />
-						<Project projectData={projectsData.spaa} />
-						<Project projectData={projectsData.myStudentProject} />
-					</div>
-					<div className="mt-20 lg:mt-0">
-						<Project projectData={projectsData.gyravo} />
-						<Project projectData={projectsData.shake} />
+				<div className="flex flex-col items-center">
+					<div className="w-full">
+						{Object.keys(projectsData).map((key: string) => (
+							<Project key={key} projectData={projectsData[key]} />
+						))}
 					</div>
 				</div>
 			)}

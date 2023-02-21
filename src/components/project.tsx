@@ -12,52 +12,43 @@ export default function Project({ projectData }: projectInterface) {
 
 	return (
 		<>
-			<div
-				className={`
-				h-60
-				w-40
-				lg:h-96
-				lg:w-72
-				rounded-2xl
-				flex
-				flex-col
-				items-center
-				relative
-				bg-gradient-to-b
-				${projectData.bgColorGradient}
-				to-white
-				my-10
-				mx-2
-			`}
-			>
-				<h2 className="pt-4">{projectData.title}</h2>
-				<div className="h-full flex items-center justify-center">
-					<Image
-						src={projectData.icon}
-						width={110}
-						height={100}
-						alt={projectData.title}
-						className="mb-16 flex justify-center items-center"
-					></Image>
-				</div>
-				<button
-					className={`
-						bg-[#F9EAED]
-						w-2/3
-						h-1/6
-						rounded-3xl
-						flex
-						justify-center
-						items-center
+			<div className="relative min-w-full bg-slate-200 h-[13em] rounded-[20px] mb-5">
+				<div
+					className="
 						absolute
-						-bottom-5
-					`}
+						min-w-full
+						h-[13em]
+						rounded-[20px]
+						top-0
+					"
 					onClick={() => {
 						router.push(`projects/${projectData.link}`)
 					}}
 				>
-					<span className="material-symbols-outlined text-3xl">visibility</span>
-				</button>
+				</div>
+				<div
+					className="
+						absolute
+						min-w-full
+						bg-gradient-to-b
+						from-transparent
+						to-slate-500
+						h-[13em]
+						rounded-[20px]
+						top-0
+						flex
+						flex-col
+						justify-end
+						p-4
+					"
+					onClick={() => {
+						router.push(`projects/${projectData.link}`)
+					}}
+				>
+					<p className="font-bold text-3xl">{projectData.title}</p>
+					<p>{projectData.date}</p>
+				</div>
+
 			</div>
 		</>
 	)
