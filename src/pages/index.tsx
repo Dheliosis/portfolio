@@ -1,12 +1,54 @@
+import { projectDetailsInterface } from "@/lib/projects"
+import { getAllProjectsDetails, projectsDataInterface } from "@/lib/projects"
 import Head from "next/head"
-import { Inter } from "@next/font/google"
-import WeekCalendar from "@/components/weekCalendar"
 import Image from "next/image"
-import handball from "public/img/handball.jpeg"
+import router from "next/router"
+import { useEffect, useState } from "react"
 
-const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
+	const [projectsData, setProjectData] = useState({})
+
+	useEffect(() => {
+		const projectDetails: projectsDataInterface = getAllProjectsDetails()
+		setProjectData(projectDetails)
+	}, [])
+
+	const adjectives = [
+		{
+			id: "dynamic",
+			title: "Dynamique",
+			text: "Lorem",
+			image: "ee",
+		},
+		{
+			id: "jovial",
+			title: "Joviale",
+			text: "Lorem",
+			image: "ee",
+		},
+		{
+			id: "involved",
+			title: "Impliquée",
+			text: "Lorem",
+			image: "ee",
+		},
+		{
+			id: "curious",
+			title: "Curieuse",
+			text: "Lorem",
+			image: "ee",
+		},
+		{
+			id: "passionate",
+			title: "Passionnée",
+			text: "Lorem",
+			image: "ee",
+		},
+	]
+
+	const [currentAdjective, setCurrentAdjective] = useState(adjectives[0])
+
 	return (
 		<>
 			<Head>
@@ -18,70 +60,104 @@ export default function Home() {
 			<main className="flex flex-col">
 				<div className="lg:h-screen lg:flex lg:items-center px-4 xl:px-96">
 					<div>
-						<h1 className="text-6xl font-bold mb-5">
-							Hello, je suis Caro <span className="text-red-500">♦️</span>
+						<h1 className="text-5xl font-bold mb-5">
+							Caroline <span className="text-red-500">♦️</span>
 						</h1>
-						<p className="text-6xl font-bold text-primary-blue">
-							Bienvenue chez moi !
-						</p>
-						<div className="pb-10 text-xl">
-							<p>Enfin bienvenue dans mon monde. </p>
-							<p>
-								Un monde fait de balles de hand, de lignes de code, de touches
-								de manette, de pages de livre, de grains de sable, de flocons de
-								neige et de sourires.
-							</p>
-						</div>
-						<div className="lg:flex lg:items-center lg:justify-between">
-							<div className="flex justify-center">
-								<Image
-									src={handball}
-									alt={"Caroline Fassot"}
-									height={500}
-									className="rounded-3xl"
-								></Image>
-							</div>
-							<div className="lg:w-3/5 py-8">
-								<p>
-									Me décrire sans commencer par exprimer ma passion pour le{" "}
-									<span className="text-red-500">handball</span> n&apos;aurait
-									aucune sens.
-								</p>
-								<p>
-									<span className="text-red-500">Déterminer</span>, à l&apos;
-									<span className="text-red-500">écoute</span>,{" "}
-									<span className="text-red-500">investie</span> et{" "}
-									<span className="text-red-500">passionnée</span>. Voilà les
-									qualités primordiales pour moi, que ce soit dans le sport que
-									dans l&apos;univers du développement.
-								</p>
-								<p>
-									J&apos;ai commencer mes premiers pas sur un ordinateur un jour
-									où j&apos;étais malade, mon père m&apos;a posé un pc sur les
-									genoux et depuis je l&apos;ai posé sur un bureau.
-								</p>
-								<p>
-									J&apos;ai commencé mes premiers pas dans le développement au lycée, et
-									j&apos;ai continué dans mes études supérieurs. Actuellement
-									détentrice du titre de{" "}
-									<span className="text-red-500">
-										Conceptrice, Développeuse d&apos;Application
-									</span>{" "}
-									et d&apos;un{" "}
-									<span className="text-red-500">Bachelor Développeur Web</span>
-									, je continue l&apos;aventure en{" "}
-									<span className="text-red-500">
-										Master Développeur Fullstask
+						<ul className="flex overflow-auto">
+							{adjectives.map(adjective => (
+								<li key={adjective.id}
+									className={`
+										mr-8
+										flex
+										flex-col
+										items-center
+										${adjective.id === currentAdjective.id ?
+										"text-white" : "text-dark-blue-light"}
+									`}
+									onClick={() => {
+										setCurrentAdjective(adjective)
+										document.getElementById(adjective.id).scrollIntoView({behavior:"smooth"})
+									}}>
+									<span className={currentAdjective.id === adjective.id ? "font-bold" : ""}>
+										{adjective.title}
 									</span>
-									.
-								</p>
-							</div>
-						</div>
+									{adjective.id === currentAdjective.id ? (
+										<span className="w-2 h-2 bg-white block rounded-full"/>
+									) : null}
+								</li>
+							))}
+						</ul>
+						<ul className="mt-4 flex overflow-auto min-h-[25rem] snap-x items-center">
+							{adjectives.map(adjective => (
+								<li key={adjective.id}
+									id={adjective.id}
+									className={`
+										mx-4
+										bg-slate-400
+										rounded-[20px]
+										transition
+										ease-in-out
+										h-[22rem] min-w-[18rem]
+										snap-center
+										p-4
+										flex
+										flex-col
+										justify-end
+										${adjective.id === currentAdjective.id ?
+										"scale-110 duration-300"
+										: ""}
+									`}>
+										<p>{adjective.title}</p>
+										<p>{adjective.text}</p>
+								</li>
+							))}
+						</ul>
 					</div>
-				</div>
-				<div className="bg-[#E4E4E4] text-black px-4 xl:px-96 py-10">
-					<p className="pb-4 text-xl">Mais Caro, tu fais quoi aujourd&apos;hui ?</p>
-					<WeekCalendar />
+					<div className="mb-5 mt-14">
+						<div className="flex justify-between items-center mb-5">
+							<h2 className="text-3xl font-bold">
+								Projets
+							</h2>
+							<span
+								className="text-dark-blue-light"
+								onClick={() => {
+									router.push("projects")
+								}}>Voir plus</span>
+						</div>
+						{projectsData ? (
+							<div className="flex overflow-auto">
+								{Object.keys(projectsData).map((key: string) => (
+									<div
+										key={projectsData[key].title}
+										className="flex flex-col items-center mr-6"
+										onClick={() => {
+											router.push(`projects/${projectsData[key].link}`)
+										}}
+									>
+										<div
+											className="
+												min-h-[6rem]
+												min-w-[6rem]
+												bg-white
+												rounded-full
+												flex
+												justify-center
+												items-center
+											">
+											<Image
+												src={projectsData[key].icon}
+												alt={projectsData[key].title}
+												width={60}
+												height={80}
+											/>
+										</div>
+										<h3>{projectsData[key].title}</h3>
+									</div>
+								))}
+
+							</div>
+						) : null}
+					</div>
 				</div>
 			</main>
 		</>
