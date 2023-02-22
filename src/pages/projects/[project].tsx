@@ -46,7 +46,7 @@ export default function Project({ projectData }: any) {
 										mr-4
 										my-1
 										${techno.bgColor}
-										text-${techno.textColor}
+										${techno.textColor}
 										font-bold
 									`}
 									key={techno.title}
