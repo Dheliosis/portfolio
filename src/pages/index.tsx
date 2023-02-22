@@ -1,51 +1,18 @@
-import { projectDetailsInterface } from "@/lib/projects"
-import { getAllProjectsDetails, projectsDataInterface } from "@/lib/projects"
+import { getHomeProjectsDetails, projectDetailsInterface } from "@/lib/projects"
 import Head from "next/head"
 import Image from "next/image"
 import router from "next/router"
 import { useEffect, useState } from "react"
+import { adjectives } from "@/lib/adjectives"
 
 
 export default function Home() {
-	const [projectsData, setProjectData] = useState({})
+	const [projectsData, setProjectData] = useState([])
 
 	useEffect(() => {
-		const projectDetails: projectsDataInterface = getAllProjectsDetails()
+		const projectDetails: projectDetailsInterface[] = getHomeProjectsDetails()
 		setProjectData(projectDetails)
 	}, [])
-
-	const adjectives = [
-		{
-			id: "dynamic",
-			title: "Dynamique",
-			text: "Lorem",
-			image: "ee",
-		},
-		{
-			id: "jovial",
-			title: "Joviale",
-			text: "Lorem",
-			image: "ee",
-		},
-		{
-			id: "involved",
-			title: "Impliquée",
-			text: "Lorem",
-			image: "ee",
-		},
-		{
-			id: "curious",
-			title: "Curieuse",
-			text: "Lorem",
-			image: "ee",
-		},
-		{
-			id: "passionate",
-			title: "Passionnée",
-			text: "Lorem",
-			image: "ee",
-		},
-	]
 
 	const [currentAdjective, setCurrentAdjective] = useState(adjectives[0])
 
@@ -58,7 +25,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className="flex flex-col">
-				<div className="lg:h-screen lg:flex lg:items-center px-4 xl:px-96">
+				<div className="px-4 xl:px-96">
 					<div>
 						<h1 className="text-5xl font-bold mb-5">
 							Caroline <span className="text-red-500">♦️</span>
@@ -66,6 +33,7 @@ export default function Home() {
 						<ul className="flex overflow-auto">
 							{adjectives.map(adjective => (
 								<li key={adjective.id}
+									role="button"
 									className={`
 										mr-8
 										flex
@@ -76,7 +44,9 @@ export default function Home() {
 									`}
 									onClick={() => {
 										setCurrentAdjective(adjective)
-										document.getElementById(adjective.id).scrollIntoView({behavior:"smooth"})
+										const newActiveAdjective = document.getElementById(adjective.id)
+										if (newActiveAdjective) newActiveAdjective.scrollIntoView({behavior:"smooth"})
+
 									}}>
 									<span className={currentAdjective.id === adjective.id ? "font-bold" : ""}>
 										{adjective.title}
@@ -87,28 +57,56 @@ export default function Home() {
 								</li>
 							))}
 						</ul>
-						<ul className="mt-4 flex overflow-auto min-h-[25rem] snap-x items-center">
+						<ul className="mt-4 flex overflow-auto min-h-[25rem] snap-x items-center lg:flex-wrap">
 							{adjectives.map(adjective => (
 								<li key={adjective.id}
 									id={adjective.id}
 									className={`
+										relative
 										mx-4
+										lg:my-8
 										bg-slate-400
 										rounded-[20px]
 										transition
 										ease-in-out
 										h-[22rem] min-w-[18rem]
-										snap-center
-										p-4
-										flex
-										flex-col
-										justify-end
 										${adjective.id === currentAdjective.id ?
 										"scale-110 duration-300"
 										: ""}
-									`}>
-										<p>{adjective.title}</p>
+									`}
+									style={{
+										backgroundImage: `url(${adjective.image.src})`,
+										backgroundRepeat: "no-repeat",
+										backgroundSize: "cover",
+										backgroundPosition: "center"
+									}}
+
+								>
+									<div
+										className={`
+											absolute
+											top-0
+											left-0
+											bg-gradient-to-b
+											from-transparent
+											to-slate-900/70
+											rounded-[20px]
+											transition
+											ease-in-out
+											h-[22rem] min-w-[18rem]
+											snap-center
+											p-4
+											flex
+											flex-col
+											justify-end
+											${adjective.id === currentAdjective.id ?
+											"scale-100 duration-300"
+											: ""}
+									`}
+									>
+										<p className="font-bold">{adjective.title}</p>
 										<p>{adjective.text}</p>
+									</div>
 								</li>
 							))}
 						</ul>
@@ -118,20 +116,21 @@ export default function Home() {
 							<h2 className="text-3xl font-bold">
 								Projets
 							</h2>
-							<span
+							<button
 								className="text-dark-blue-light"
 								onClick={() => {
 									router.push("projects")
-								}}>Voir plus</span>
+								}}>Voir plus</button>
 						</div>
 						{projectsData ? (
-							<div className="flex overflow-auto">
-								{Object.keys(projectsData).map((key: string) => (
-									<div
-										key={projectsData[key].title}
-										className="flex flex-col items-center mr-6"
+							<ul className="flex overflow-auto snap-x">
+								{projectsData.map((project:projectDetailsInterface) => (
+									<li
+										key={project.title}
+										role="button"
+										className="flex flex-col items-center mr-6 w-[6rem]"
 										onClick={() => {
-											router.push(`projects/${projectsData[key].link}`)
+											router.push(`projects/${project.link}`)
 										}}
 									>
 										<div
@@ -143,19 +142,20 @@ export default function Home() {
 												flex
 												justify-center
 												items-center
+												snap-center
 											">
 											<Image
-												src={projectsData[key].icon}
-												alt={projectsData[key].title}
+												src={project.icon}
+												alt={project.title}
 												width={60}
 												height={80}
 											/>
 										</div>
-										<h3>{projectsData[key].title}</h3>
-									</div>
+										<h3 className="text-center">{project.title}</h3>
+									</li>
 								))}
 
-							</div>
+							</ul>
 						) : null}
 					</div>
 				</div>
