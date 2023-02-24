@@ -12,11 +12,11 @@ export default function Project({ projectData }: projectInterface) {
 
 	return (
 		<>
-			<div className="relative min-w-full bg-slate-200 h-[13em] rounded-[20px] mb-5">
+			<div className="relative w-full bg-slate-200 h-[13em] rounded-[20px] mb-5">
 				<div
 					className="
 						absolute
-						min-w-full
+						w-full
 						h-[13em]
 						rounded-[20px]
 						top-0
@@ -29,7 +29,7 @@ export default function Project({ projectData }: projectInterface) {
 				<div
 					className="
 						absolute
-						min-w-full
+						w-full
 						bg-gradient-to-b
 						from-transparent
 						to-slate-500
