@@ -5,6 +5,7 @@ import {
 	technoDetailsInterface,
 } from "@/lib/projects"
 import Image from "next/image"
+import { lazy, Suspense } from "react"
 
 export async function getStaticPaths() {
 	const paths = await getProjectIdList()
@@ -24,6 +25,7 @@ export async function getStaticProps({ params }: any) {
 }
 
 export default function Project({ projectData }: any) {
+	const MyComponent = lazy(()=> import(`@/components/projects/${projectData.link}`))
 	return (
 		<>
 			<AnimatedBackground
@@ -70,6 +72,11 @@ export default function Project({ projectData }: any) {
 						className="my-10"
 						width={500}
 					></Image>
+				</div>
+				<div className="px-4 lg:px-60">
+					<Suspense fallback= {<div>Loading...</div>}>
+						<MyComponent></MyComponent>
+					</Suspense>
 				</div>
 			</main>
 		</>
