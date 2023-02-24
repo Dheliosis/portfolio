@@ -126,7 +126,7 @@ const technos: technoInterface = {
 	},
 }
 
-const projectsData: projectsDataInterface = {
+export const projectsData: projectsDataInterface = {
 	portfolio:{
 		title: "Portfolio",
 		description:
@@ -193,8 +193,8 @@ const projectsData: projectsDataInterface = {
 	teamsplate: {
 		title: "Teamsplate",
 		description:
-			`Teamsplate est une application mobile, imaginée par Jaddlo, développée par Codekraft,
-			qui permet aux clubs amateurs de créer facilement et rapidement des visuels pour animer
+			`Teamsplate est une application mobile imaginée par Jaddlo et développée par Codekraft.
+			Elle permet aux clubs amateurs de créer facilement et rapidement des visuels pour animer
 			leurs réseaux sociaux grâce à des modèles spécifiques entièrement personnalisables.`,
 		date: "Mai 2022 ↣ Novembre 2022",
 		icon: teamsplateIcon,
@@ -218,11 +218,10 @@ const projectsData: projectsDataInterface = {
 	gyravo: {
 		title: "GY.RA.VO.",
 		description:
-			`GY.RA.VO. acronyme de Gymnastique Rabelaisienne Volontaire est
-			une association de gymnastique volontaire dépendante de la FFEGV.
-			L'association voulait une refonte intégralle de leur site internet.
-			Dans le contexte d'un projet d'école avec des camarades, nous avons monté tout un projet
-			de refonte de l'univers de marque, de la communication et du site internet de l'association.`,
+			`GY.RA.VO., acronyme de Gymnastique Rabelaisienne Volontaire, est une association de gymnastique volontaire
+			dépendante de la FFEGV. L'association souhaitait une refonte intégrale de son site internet.
+			Dans le cadre d'un projet d'école avec des camarades, nous avons monté tout un projet de refonte
+			de l'univers de marque, de la communication et du site internet de l'association.`,
 		date: "Décembre 2021 ↣ Juillet 2022",
 		icon: gyravoIcon,
 		logo: gyravoLogo,
