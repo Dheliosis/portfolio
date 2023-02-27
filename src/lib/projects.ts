@@ -150,9 +150,9 @@ export const projectsData: projectsDataInterface = {
 	e2e:{
 		title: "Tests End-to-End",
 		description:
-			`Réalisation de test E2E sur des projets réalisés par l'entreprise Codekaft,
-			avec mise en place des dépots git pour chaque projet depuis un dépots général.
-			Mise en place de CI/CD gitlab. `,
+			`Création de tests End-to-End sur des projets réalisés par l'entreprise Codekraft,
+			avec la mise en place de dépôts Git pour chaque projet depuis un dépôt général et la mise en oeuvre
+			de Continuous Integration/Continuous Delivery (CI/CD) GitLab.`,
 		date: "Février 2022 ↣ Mars 2023",
 		icon: e2eIcon,
 		logo: appscriptLogo,
