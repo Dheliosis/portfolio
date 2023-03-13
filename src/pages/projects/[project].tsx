@@ -25,7 +25,7 @@ export async function getStaticProps({ params }: any) {
 }
 
 export default function Project({ projectData }: any) {
-	const MyComponent = lazy(()=> import(`@/components/projects/${projectData.link}`))
+	const MyComponent = lazy(() => import(`@/components/projects/${projectData.link}`))
 	return (
 		<>
 			<AnimatedBackground
@@ -74,7 +74,7 @@ export default function Project({ projectData }: any) {
 					></Image>
 				</div>
 				<div className="px-4 lg:px-60">
-					<Suspense fallback= {<div>Loading...</div>}>
+					<Suspense fallback={<div>Loading...</div>}>
 						<MyComponent></MyComponent>
 					</Suspense>
 				</div>

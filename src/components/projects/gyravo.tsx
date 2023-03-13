@@ -5,41 +5,41 @@ import GenericButton from "../button"
 export default function teamsplate() {
 	const projectTeam = [
 		{
-			name:"Chiara Davis",
-			role:"Web Designeuse",
-			link:""
+			name: "Chiara Davis",
+			role: "Web Designeuse",
+			link: ""
 		},
 		{
-			name:"Lucie Manetti",
-			role:"E-business",
-			link:""
+			name: "Lucie Manetti",
+			role: "E-business",
+			link: ""
 		},
 		{
-			name:"Camille Renard",
-			role:"Web Marketing",
-			link:""
+			name: "Camille Renard",
+			role: "Web Marketing",
+			link: ""
 		},
 		{
-			name:"Pauline Rouable",
-			role:"E-business",
-			link:""
+			name: "Pauline Rouable",
+			role: "E-business",
+			link: ""
 		},
 		{
-			name:"Et moi-même, Caroline Fassot",
-			role:"Développeuse et Cheffe de projet",
-			link:""
+			name: "Et moi-même, Caroline Fassot",
+			role: "Développeuse et Cheffe de projet",
+			link: ""
 		},
 	]
 
-	const gitHubFrontButton={
+	const gitHubFrontButton = {
 		text: "Github Front",
 		link: ""
 	}
-	const gitHubBackButton={
+	const gitHubBackButton = {
 		text: "Github Back",
 		link: ""
 	}
-	const projectFileButton={
+	const projectFileButton = {
 		text: "Fichier du projet",
 		link: ""
 	}

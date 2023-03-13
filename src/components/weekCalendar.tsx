@@ -31,24 +31,24 @@ export default function WeekCalendar() {
 
 	function getDayActivity(day: number) {
 		switch (day) {
-			case 2: {
-				return getWednesdayActivity()
-			}
-			case 4: {
-				return getFridayActivity()
-			}
-			case 5: {
-				return getSaturdayActivity()
-			}
-			case 6: {
-				return getSundayActivity()
-			}
-			case 0:
-			case 1:
-			case 3:
-			default: {
-				return getNormalDayActivity()
-			}
+		case 2: {
+			return getWednesdayActivity()
+		}
+		case 4: {
+			return getFridayActivity()
+		}
+		case 5: {
+			return getSaturdayActivity()
+		}
+		case 6: {
+			return getSundayActivity()
+		}
+		case 0:
+		case 1:
+		case 3:
+		default: {
+			return getNormalDayActivity()
+		}
 		}
 	}
 
@@ -126,8 +126,7 @@ export default function WeekCalendar() {
 					{dayInFrench.map((day, index) => (
 						<button
 							key={day}
-							className={`flex flex-col items-center px-2 py-3 rounded-lg ${
-								isDaySelected(index) ? "bg-primary-blue text-white" : ""
+							className={`flex flex-col items-center px-2 py-3 rounded-lg ${isDaySelected(index) ? "bg-primary-blue text-white" : ""
 							}`}
 							onClick={() => setSelectedDay(index)}
 						>

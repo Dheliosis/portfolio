@@ -109,17 +109,17 @@ const technos: technoInterface = {
 		bgColor: "bg-[#2364C9]",
 		textColor: "text-white",
 	},
-	googlescript:{
+	googlescript: {
 		title: "Google Script",
 		bgColor: "bg-[#F70028]",
 		textColor: "text-black",
 	},
-	cucumber:{
+	cucumber: {
 		title: "Cucumber",
 		bgColor: "bg-[#00ED66]",
 		textColor: "text-black",
 	},
-	playwright:{
+	playwright: {
 		title: "Playwright",
 		bgColor: "bg-[#E63C43]",
 		textColor: "text-black",
@@ -127,7 +127,7 @@ const technos: technoInterface = {
 }
 
 export const projectsData: projectsDataInterface = {
-	portfolio:{
+	portfolio: {
 		title: "Portfolio",
 		description:
 			`Le site que vous êtes actuellement en train de consulter. Je vous présente à travers ces quelques pages
@@ -147,7 +147,7 @@ export const projectsData: projectsDataInterface = {
 			"https://github.com/Dheliosis/portfolio",
 		animatedBgColor: "bg-[#00E8D6]",
 	},
-	e2e:{
+	e2e: {
 		title: "Tests End-to-End",
 		description:
 			`Création de tests End-to-End sur des projets réalisés par l'entreprise Codekraft,
@@ -169,7 +169,7 @@ export const projectsData: projectsDataInterface = {
 			"https://play.google.com/store/apps/details?id=com.jaddloMobile",
 		animatedBgColor: "bg-[#00ED66]",
 	},
-	gap:{
+	gap: {
 		title: "Google AppScript",
 		description:
 			`Le projet Appscript a été réalisé pour simplifier le travail de l'équipe de gestion de projet

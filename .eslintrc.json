@@ -13,7 +13,7 @@
 		"semi": ["error", "never"],
 		"quotes": ["error", "double"],
 		"no-plusplus": "off",
-		"max-len": ["error", { "ignoreComments": true, "code": 120 }],
+		"max-len": ["warn", { "ignoreComments": true, "code": 120 }],
 		"indent": ["error", "tab"],
 		"no-tabs": ["error", { "allowIndentationTabs": true }],
 		"arrow-parens": ["error", "as-needed"],

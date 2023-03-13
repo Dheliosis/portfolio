@@ -40,19 +40,19 @@ export default function Home() {
 										flex-col
 										items-center
 										${adjective.id === currentAdjective.id ?
-										"text-white" : "text-dark-blue-light"}
+									"text-white" : "text-dark-blue-light"}
 									`}
 									onClick={() => {
 										setCurrentAdjective(adjective)
 										const newActiveAdjective = document.getElementById(adjective.id)
-										if (newActiveAdjective) newActiveAdjective.scrollIntoView({behavior:"smooth"})
+										if (newActiveAdjective) newActiveAdjective.scrollIntoView({ behavior: "smooth" })
 
 									}}>
 									<span className={currentAdjective.id === adjective.id ? "font-bold" : ""}>
 										{adjective.title}
 									</span>
 									{adjective.id === currentAdjective.id ? (
-										<span className="w-2 h-2 bg-white block rounded-full"/>
+										<span className="w-2 h-2 bg-white block rounded-full" />
 									) : null}
 								</li>
 							))}
@@ -71,8 +71,8 @@ export default function Home() {
 										ease-in-out
 										h-[22rem] min-w-[18rem]
 										${adjective.id === currentAdjective.id ?
-										"scale-110 duration-300"
-										: ""}
+									"scale-110 duration-300"
+									: ""}
 									`}
 									style={{
 										backgroundImage: `url(${adjective.image.src})`,
@@ -100,8 +100,8 @@ export default function Home() {
 											flex-col
 											justify-end
 											${adjective.id === currentAdjective.id ?
-											"scale-100 duration-300"
-											: ""}
+									"scale-100 duration-300"
+									: ""}
 									`}
 									>
 										<p className="font-bold">{adjective.title}</p>
@@ -124,7 +124,7 @@ export default function Home() {
 						</div>
 						{projectsData ? (
 							<ul className="flex overflow-auto snap-x">
-								{projectsData.map((project:projectDetailsInterface) => (
+								{projectsData.map((project: projectDetailsInterface) => (
 									<li
 										key={project.title}
 										role="button"

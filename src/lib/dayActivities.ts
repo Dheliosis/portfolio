@@ -9,7 +9,7 @@ import education from "public/img/weekActivities/education.png"
 
 
 export interface activityInterface {
-	description : string
+	description: string
 	icon: any
 }
 

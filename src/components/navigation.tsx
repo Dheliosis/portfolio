@@ -62,10 +62,9 @@ const Navigation = () => {
 						className="flex flex-col items-center lg:flex-row lg:justify-center lg:mx-1"
 					>
 						<span
-							className={`material-symbols-outlined text-3xl ${
-								activeTabNavigator === tab.name
-									? "text-primary-blue"
-									: "text-secondary-blue"
+							className={`material-symbols-outlined text-3xl ${activeTabNavigator === tab.name
+								? "text-primary-blue"
+								: "text-secondary-blue"
 							}`}
 						>
 							{tab.icon}
