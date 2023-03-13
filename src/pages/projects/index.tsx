@@ -17,7 +17,7 @@ export default function Projects() {
 				<></>
 			) : (
 				<div className="flex flex-col items-center">
-					<div className="w-full lg:flex lg:overflow-auto">
+					<div className="w-full lg:flex lg:flex-wrap">
 						{Object.keys(projectsData).map((key: string) => (
 							<Project key={key} projectData={projectsData[key]} />
 						))}
